@@ -1,0 +1,65 @@
+#+TITLE:     *Org Mode LaTeX presentation*
+
+#+EMAIL:     leeroy.jenkins@protonmail.com
+#+DATE:      1/1/1970
+
+#+BEAMER_HEADER: \author{Leeroy Jenkins \and \newline Principal Troublemaker \and \newline Havock Inc.}
+
+#+SETUPFILE: headers.org
+
+** First slide
+
+Most basic slide consists of a small introduction.
+
+ + Followed by a statement
+ + And another one
+ + Ans some more
+   - With some nested bullet points
+
+** A very complex architecture
+
+#+ATTR_LATEX: :width 0.40\textwidth
+[[./img/complex-architecture.pdf]]
+
+** A Makefile
+
+#+BEGIN_SRC makefile
+
+CC      = gcc
+CFLAGS  = -g
+RM      = rm -f
+
+default: all
+
+all: hello
+
+hello: hello.c
+    $(CC) $(CFLAGS) -o hello hello.c
+
+clean:
+    $(RM) hello
+
+#+END_SRC
+
+** Elixir is a cool language
+
+#+BEGIN_SRC elixir
+
+defmodule HelloWorld do
+  def hello do
+    IO.puts("Hello World")
+  end
+end
+
+#+END_SRC
+
+** Python too
+
+#+BEGIN_SRC python
+
+def fibonacci(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return fibonacci(n - 1) + fibonacci(n - 2)
+
+#+END_SRC
