@@ -1,0 +1,58 @@
+#+STARTUP: beamer
+#+OPTIONS: H:1 num:t toc:nil ^:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+LATEX_CLASS: beamer
+#+BEAMER_THEME: default
+#+BEAMER_COLOR_THEME: dove
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+#+BEAMER_FRAME_LEVEL: 1
+
+#+LaTeX_CLASS_OPTIONS: [presentation, bigger, aspectratio=169]
+
+# Bulletpoint lists
+#+BEAMER_HEADER: \setbeamertemplate{itemize items}[]
+#+BEAMER_HEADER: \setbeamertemplate{itemize subitem}[circle]
+
+# Remove slides navigation symbols
+#+BEAMER_HEADER: \beamertemplatenavigationsymbolsempty
+
+# Frame margins, background image and title colours
+#+LaTeX_HEADER: \definecolor{blue}{HTML}{0000FF}
+#+BEAMER_HEADER: \setbeamercolor{frametitle}{fg=blue,bg=white}
+#+BEAMER_HEADER: \setbeamersize{text margin left=1.5cm,text margin right=1.5cm}
+#+BEAMER_HEADER: \addtobeamertemplate{frametitle}{\vspace*{0cm}}{\vspace*{-1cm}}
+#+LATEX_HEADER: \usebackgroundtemplate{\includegraphics[width=\paperwidth]{img/background.pdf}}
+
+# Use Minted for code syntax highlighting
+#+LaTeX_HEADER: \usepackage{minted}
+#+LaTeX_HEADER: \usemintedstyle{emacs}
+
+# Fonts
+#+LATEX_HEADER: \usefonttheme{professionalfonts}
+#+LATEX_HEADER: \usefonttheme{serif}
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Gillius ADF}
+
+# Verbatim text
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\scriptsize}
+
+# Embed Beamer in frame
+#+LaTeX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\end{frame}}
+
+# Custom title slide background
+#
+# Org Mode uses `\maketitle` to draw the title slide.
+# As Org Mode does not provide any ways to customize the slide title, we override the `\maketitle` function.
+#+LATEX_HEADER: \def\maketitle{
+#+LATEX_HEADER:   {
+#+LATEX_HEADER:     \usebackgroundtemplate{\includegraphics[width=\paperwidth]{img/title-background.pdf}}
+#+LATEX_HEADER:     \setbeamercolor{date}{fg=white}
+#+LATEX_HEADER:     \setbeamercolor{title}{fg=white}
+#+LATEX_HEADER:     \setbeamercolor{author}{fg=white}
+#+LATEX_HEADER:     \setbeamercolor{alerted text}{fg=white}
+#+LATEX_HEADER:     \begin{frame}
+#+LATEX_HEADER:       \titlepage
+#+LATEX_HEADER:     \end{frame}
+#+LATEX_HEADER:   }
+#+LATEX_HEADER: }
