@@ -10,7 +10,7 @@
 #+LaTeX_CLASS_OPTIONS: [presentation, bigger, aspectratio=169]
 
 # Bulletpoint lists
-#+BEAMER_HEADER: \setbeamertemplate{itemize items}[]
+#+BEAMER_HEADER: \setbeamertemplate{itemize items}{}
 #+BEAMER_HEADER: \setbeamertemplate{itemize subitem}[circle]
 
 # Remove slides navigation symbols
