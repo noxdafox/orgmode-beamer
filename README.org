@@ -1,0 +1,20 @@
+* Org Mode LaTeX presentation
+
+Example presentation built with LaTeX, Beamer and Org Mode.
+
+** Requirements
+
+ - Xetex
+   http://xetex.sourceforge.net/
+ - Pygments
+   http://pygments.org/
+ - Emacs 26 or greater
+   https://www.gnu.org/software/emacs/
+
+** Set Up
+
+Include `presentation.el` within Emacs configuration.
+
+** Building the slides
+
+Use the `org-latex-export-to-pdf` command or its shortcut `C-x C-e l P`.
