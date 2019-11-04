@@ -11,10 +11,10 @@
 
 Most basic slide consists of a small introduction
 
- + Followed by a statement
- + And another one
- + Ans some more
-   - With some nested bullet points
+ - Followed by a statement
+ - And another one
+ - And some more
+   + With some nested bullet points
 
 ** Second slide
 
