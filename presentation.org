@@ -1,4 +1,4 @@
-2#+TITLE:     *Org Mode LaTeX presentation*
+#+TITLE:     *Org Mode LaTeX presentation*
 
 #+EMAIL:     leeroy.jenkins@protonmail.com
 #+DATE:      1/1/1970
