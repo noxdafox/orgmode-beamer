@@ -1,4 +1,4 @@
-#+TITLE:     *Org Mode LaTeX presentation*
+2#+TITLE:     *Org Mode LaTeX presentation*
 
 #+EMAIL:     leeroy.jenkins@protonmail.com
 #+DATE:      1/1/1970
@@ -9,17 +9,28 @@
 
 ** First slide
 
-Most basic slide consists of a small introduction.
+Most basic slide consists of a small introduction
 
  + Followed by a statement
  + And another one
  + Ans some more
    - With some nested bullet points
 
+** Second slide
+
+Sometimes slides are just a bit of text
+
+#+BEAMER: \vspace{0.3cm}
+
+It is good to separate long sentences with some white space
+
 ** A very complex architecture
 
 #+ATTR_LATEX: :width 0.40\textwidth
-[[./img/complex-architecture.pdf]]
+#+CAPTION: Diagram built with DrawIO
+[[./img/architecture.pdf]]
+
+PDF usually has better rendering results
 
 ** A Makefile
 
@@ -41,19 +52,19 @@ clean:
 
 #+END_SRC
 
-** Elixir is a cool language
+** Fibonacci in Elixir
 
 #+BEGIN_SRC elixir
 
-defmodule HelloWorld do
-  def hello do
-    IO.puts("Hello World")
-  end
+defmodule Fibonacci do
+  def fibonacci(0) do 0 end
+  def fibonacci(1) do 1 end
+  def fibonacci(n) do fibonacci(n-1) + fibonacci(n-2) end
 end
 
 #+END_SRC
 
-** Python too
+** Fibonacci in Python
 
 #+BEGIN_SRC python
 
